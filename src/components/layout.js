@@ -4,21 +4,25 @@
  *
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
-
+import MediaQuery from 'react-responsive'
 import React from "react"
 import PropTypes from "prop-types"
-
 import WebHeader from "./web-header"
 import "./css/layout.css"
-
+import MobileHeader from "./mobile-header"
 const Layout = ({ children }) => {
 
   return (
     <>
+      <MediaQuery query="(min-device-width: 769px)">
         <WebHeader />
-        <main>{children}</main>
-        <div id = "footer">
-        </div>
+      </MediaQuery>
+      <MediaQuery query="(max-device-width: 768px)">
+        <MobileHeader/>
+      </MediaQuery>
+      <main>{children}</main>
+      <div id="footer">
+      </div>
     </>
   )
 }

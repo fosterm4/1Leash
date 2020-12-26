@@ -2,7 +2,7 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import logo from '../images/gatsby-icon.png'
-import bag from '../images/shopping-bag-white.png'
+import bag from '../images/shopping-bag-black.png'
 import './css/web-header.css'
 
 class WebHeader extends React.Component{
@@ -38,8 +38,8 @@ class WebHeader extends React.Component{
           <Link to="/courses">BUY THE COURSE</Link>
           <Link to="/"><img src={logo} width="40" alt = "logo"/></Link>
           <Link to="/shop">SHOP</Link>
-          <Link><img src={bag} width="25" alt = "bag"className="snipcart-checkout"/> </Link>
           <Link><button className="snipcart-customer-signin">SIGN IN</button></Link>
+          <Link className="cart"><img src={bag} width="34" alt = "bag"className="snipcart-checkout"/> </Link>
         </div>
       </div>
     )

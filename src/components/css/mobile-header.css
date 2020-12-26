@@ -9,7 +9,7 @@
  
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
-  background: #feffff;
+  background: #000000;
 }
  
 /* Color/shape of burger icon bars on hover*/
@@ -40,7 +40,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 /* General sidebar styles */
 .bm-menu {
   background: #ffffff;
-  padding: 2.5em 1.5em 0;
+  padding: 5.5em 1.5em 0;
   font-size: 1.15em;
 }
  
@@ -68,6 +68,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .MobileMenu{
   position:relative;
   z-index:1;
+  background-color: white;
 }
 
 #logo{
@@ -85,8 +86,8 @@ Note: Beware of modifying this element as it can break the animations - you shou
 }
 
 button{
-  padding: 1px 10px;
-  font-size: 20px;
+  padding: 0px 5px;
+  font-size: 23px;
   background: white;
   border: none;
   font-weight: 700;
@@ -94,7 +95,7 @@ button{
   color: black;
   outline: none;
   cursor:pointer;
-  border: 2px solid rgba(0, 0, 0, 0.26);
+  border: 2px solid rgba(0, 0, 0, 0.9);
 }
 
 a{

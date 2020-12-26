@@ -3,7 +3,7 @@ import SEO from "../components/seo"
 import { slide as MobileMenu } from 'react-burger-menu'
 import "./css/mobile-header.css"
 import logo from '../images/gatsby-icon.png'
-import bag from '../images/shopping-bag-white.png'
+import bag from '../images/shopping-bag-black.png'
 import { Link } from "gatsby"
 
 class MobileHeader extends React.Component {

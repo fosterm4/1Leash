@@ -6,6 +6,32 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: "gatsby-source-sanity",
+      options: {
+        projectId: "xkbrerkt",
+        dataset: "production",
+      },
+    },
+    {
+      resolve: `gatsby-plugin-snipcart-advanced`,
+      options: {
+          version: '3.0.15',
+          publicApiKey: 'MTYyN2M4Y2QtNzRkMC00YTQ4LThmOTYtMTg3M2FjOWRhMjllNjM3NDQ0NjYxOTMxODc1MTgw', // use public api key here or in environment variable
+          openCartOnAdd: false,
+          locales: {
+            fr: {
+              actions: {
+                checkout: 'Valider le panier',
+              },
+            }
+          },
+          innerHTML: `
+          <billing section="bottom">
+              <!-- Customization goes here -->
+          </billing>`,
+      },
+  },
+    {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {

@@ -67,7 +67,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 .MobileMenu{
   position:relative;
-  z-index:300000;
+  z-index:1;
 }
 
 #logo{

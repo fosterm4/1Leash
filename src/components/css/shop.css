@@ -1,0 +1,28 @@
+.onBackground{
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+.onBackground h2{
+  margin:auto;
+  color: white;
+  font-size: 70px;
+  width: 370px;
+  position: absolute;
+  left: 1%;
+  right: 1%;
+  top: 15%;
+}
+
+.Cards h2{
+  font-size: 40px;
+}
+
+.contactForm{
+  margin: 10px 40px 100px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 40px;
+  justify-items: center;
+}

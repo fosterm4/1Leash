@@ -11,13 +11,13 @@ class MobileHeader extends React.Component {
     return (
       <div class="MobileMenu" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gridGap: 20 }}>
         <MobileMenu>
-          <Link to="/">ABOUT US</Link>
-          <Link to="/aboutUs">BUY THE COURSE</Link>
-          <Link to="/contact">SHOP</Link>
-          <Link to="/ranchSearch"><button>LOGIN</button></Link>
+          <Link to="/aboutus">ABOUT US</Link>
+          <Link to="/courses">BUY THE COURSE</Link>
+          <Link to="/shop">SHOP</Link>
+          <Link><button className="snipcart-customer-signin">SIGN IN</button></Link>
         </MobileMenu>
         <Link id="logo" to="/"><img src={logo} width="40" alt="logo" /></Link>
-        <Link id="shopping-bag" to="/"><img src={bag} width="40" alt="bag" /></Link>
+        <Link id="shopping-bag"><img src={bag} width="40" alt="bag" className="snipcart-checkout"/></Link>
       </div>
     )
   }

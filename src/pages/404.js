@@ -1,17 +1,36 @@
 import React from "react"
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import '../components/css/404.css'
+import { graphql } from "gatsby"
+import BackgroundImage from "gatsby-background-image"
 
-const NotFoundPage = () => (
+const PageNotFound = (props) => (
   <Layout>
-    <SEO title="404: Not found" />
-    <h1>404: Not Found</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-    <button className="snipcart-customer-signin">
-          <span>Se connecter</span>
-        </button>
+    <div className="background">
+      <BackgroundImage
+        className="background"
+        fluid={props.data.backgroundImage.childImageSharp.fluid}
+        backgroundColor={`#040e18`}
+      >
+      </BackgroundImage>
+    </div>
+    <div className="title">
+      <h2>PAGE NOT FOUND</h2>
+    </div>
   </Layout>
 )
 
-export default NotFoundPage
+export default PageNotFound;
+
+export const pageQuery = graphql`
+  query {
+    backgroundImage: file(relativePath: { eq: "droneHunter.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1800){
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`;

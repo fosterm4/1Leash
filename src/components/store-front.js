@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from 'gatsby'
 import Product from '../components/product'
 import '../components/css/store-front.css'
+import { Link } from "gatsby"
 
 const StoreFront = data => {
   console.log(data.data.edges)
@@ -11,14 +12,9 @@ const StoreFront = data => {
         console.log(edge.node.defaultProductVariant.images)
         return (
           <div>
-            <a className="snipcart-add-item"
-              data-item-id={edge.node.slug.current}
-              data-item-price={edge.node.defaultProductVariant.price}
-              data-item-url="/shop"
-              data-item-name={edge.node.title}
-              data-item-image={imageArray(edge)}>
+            <Link to = {"/shop/" + edge.node.slug.current}>
               <Product price={"$"+edge.node.defaultProductVariant.price} productName={edge.node.title} description="" url={"/"+edge.node.slug.current} images={imageArray(edge)}/>
-            </a>
+            </Link>
           </div>
         )
       })

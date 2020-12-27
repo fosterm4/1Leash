@@ -10,6 +10,8 @@ import PropTypes from "prop-types"
 import WebHeader from "./web-header"
 import "./css/layout.css"
 import MobileHeader from "./mobile-header"
+import Footer from "./footer"
+
 const Layout = ({ children }) => {
 
   return (
@@ -22,6 +24,7 @@ const Layout = ({ children }) => {
       </MediaQuery>
       <main>{children}</main>
       <div id="footer">
+      <Footer/>
       </div>
     </>
   )

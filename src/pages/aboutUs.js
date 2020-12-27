@@ -1,11 +1,11 @@
 import React from "react"
 
 import Layout from "../components/layout"
-import '../components/css/shop.css'
+import '../components/css/aboutUs.css'
 import { graphql } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 
-const Shop = (props) => (
+const AboutUs = (props) => (
   <Layout>
     <div className="background">
       <BackgroundImage
@@ -16,16 +16,16 @@ const Shop = (props) => (
       </BackgroundImage>
     </div>
     <div className="title">
-      <h2>SHOP</h2>
+      <h2>ABOUT US</h2>
     </div>
   </Layout>
 )
 
-export default Shop;
+export default AboutUs;
 
 export const pageQuery = graphql`
   query {
-    backgroundImage: file(relativePath: { eq: "point.jpg" }) {
+    backgroundImage: file(relativePath: { eq: "droneHunter.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1800){
           ...GatsbyImageSharpFluid

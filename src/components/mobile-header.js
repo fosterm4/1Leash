@@ -11,7 +11,7 @@ class MobileHeader extends React.Component {
     return (
       <div class="MobileMenu" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gridGap: 20 }}>
         <MobileMenu>
-          <Link to="/aboutus">ABOUT US</Link>
+          <Link to="/aboutUs">ABOUT US</Link>
           <Link to="/courses">BUY THE COURSE</Link>
           <Link to="/shop">SHOP</Link>
           <Link><button className="snipcart-customer-signin">SIGN IN</button></Link>

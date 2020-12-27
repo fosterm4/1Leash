@@ -34,7 +34,7 @@ class WebHeader extends React.Component{
       <div className = {this.state.hasScrolled ?
       'Header HeaderScrolled' : 'Header'}>
         <div className="HeaderGroup">
-          <Link to="/aboutus">ABOUT US</Link>
+          <Link to="/aboutUs">ABOUT US</Link>
           <Link to="/courses">BUY THE COURSE</Link>
           <Link to="/"><img src={logo} width="40" alt = "logo"/></Link>
           <Link to="/shop">SHOP</Link>

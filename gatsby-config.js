@@ -1,8 +1,11 @@
+const path = require(`path`)
+
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Gundoggin`,
+    description: `The best place on the web to find supplies and learn how to train your bird dog.`,
+    keywords: 'gundog, gundoggin, dog, german shorthair pointer, gsp, dog training, gundog training',
+    author: `Michael Foster`,
   },
   plugins: [
     {
@@ -15,22 +18,22 @@ module.exports = {
     {
       resolve: `gatsby-plugin-snipcart-advanced`,
       options: {
-          version: '3.0.15',
-          publicApiKey: 'MTYyN2M4Y2QtNzRkMC00YTQ4LThmOTYtMTg3M2FjOWRhMjllNjM3NDQ0NjYxOTMxODc1MTgw', // use public api key here or in environment variable
-          openCartOnAdd: false,
-          locales: {
-            fr: {
-              actions: {
-                checkout: 'Valider le panier',
-              },
-            }
-          },
-          innerHTML: `
+        version: '3.0.15',
+        publicApiKey: 'MTYyN2M4Y2QtNzRkMC00YTQ4LThmOTYtMTg3M2FjOWRhMjllNjM3NDQ0NjYxOTMxODc1MTgw', // use public api key here or in environment variable
+        openCartOnAdd: false,
+        locales: {
+          fr: {
+            actions: {
+              checkout: 'Valider le panier',
+            },
+          }
+        },
+        innerHTML: `
           <billing section="bottom">
               <!-- Customization goes here -->
           </billing>`,
       },
-  },
+    },
     {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
@@ -44,11 +47,11 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
+        path: path.join(__dirname, `src`, `images`),
       },
     },
-    `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

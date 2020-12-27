@@ -5,6 +5,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import EmailList from "../components/email-list"
 import Product from "../components/product"
+import ContactForm from "../components/contact-form"
 
 const SecondPage = () => (
   <Layout>
@@ -14,6 +15,7 @@ const SecondPage = () => (
     <p>Welcome to page 2</p>
     <Link to="/">Go back to the homepage</Link>
     <Product/>
+    <ContactForm/>
   </Layout>
 )
 

@@ -1,0 +1,88 @@
+
+Form{
+  width: 100%;
+  max-width: 500px;
+  padding: 10px;
+  margin: auto;
+  height: 100%;
+  background-color: rgb(224, 224, 224);
+  border-radius: 25px;
+}
+
+.wholeForm Label{
+  margin: 15px;
+}
+.wholeForm Input{
+  font-size: 20px;
+  margin: 10px;
+}
+
+@media(min-width: 468px){
+  #name Input{
+    margin-left: 26px;
+  }
+  #email Input{
+    margin-left: 30px;
+  }
+  #phone Input{
+    margin-left: 3px;
+  }
+}
+
+
+@media(max-width: 467px){
+  #name Input{
+    margin-left: 30px;
+  }
+  #email Input{
+    margin-left: 30px;
+  }
+  #phone Input{
+    margin-left: 30px;
+  }
+  textarea{
+    margin-left: 30px;
+  }
+}
+
+
+
+textarea{
+  height: 150px;
+  font-size: 20px;
+  width: 280px;
+  margin-top: 10px;
+}
+.wholeForm Button{
+  font-size: 17px;
+  font-weight: 600;
+  color: black;
+  text-transform: uppercase;
+  background: rgb(255, 255, 255);
+  padding: 9px 20px;
+  border: 2px solid rgba(0, 0, 0, 0.26);
+  border-radius: 20px;
+  transition: 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+  margin-top: 30px;
+}
+.wholeForm Button:hover{
+  background: rgba(255, 255, 255, 0.945);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+  transform: translateY(-3px);
+  outline: none;
+}
+
+#button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wholeForm{
+  font-size: 25px;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr ;
+  grid-template-rows: 1fr 1fr 1fr;
+  justify-items: center;
+}

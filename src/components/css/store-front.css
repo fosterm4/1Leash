@@ -1,0 +1,30 @@
+.StoreFront{
+  margin: 10px 40px 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 40px;
+  justify-items: center;
+}
+@media(max-width: 1400px){
+  .StoreFront{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media(max-width: 1060px){
+  .StoreFront{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media(max-width: 720px){
+  .StoreFront{
+    grid-template-columns: 1fr;
+  }
+}
+
+.snipcart-add-item{
+  font-size: 18px;
+}
+
+.styles__product-card-name___3n1NI{
+  font-size: 18px;
+}

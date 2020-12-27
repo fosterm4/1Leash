@@ -20,7 +20,7 @@ module.exports = {
       options: {
         version: '3.0.15',
         publicApiKey: 'MTYyN2M4Y2QtNzRkMC00YTQ4LThmOTYtMTg3M2FjOWRhMjllNjM3NDQ0NjYxOTMxODc1MTgw', // use public api key here or in environment variable
-        openCartOnAdd: false,
+        openCartOnAdd: true,
         locales: {
           fr: {
             actions: {

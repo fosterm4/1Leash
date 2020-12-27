@@ -4,8 +4,11 @@ import Layout from "../components/layout"
 import '../components/css/shop.css'
 import { graphql } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
+import StoreFront from "../components/store-front"
 
-const Shop = (props) => (
+const Shop = (props) => {
+  console.log(props)
+  return(
   <Layout>
     <div className="background">
       <BackgroundImage
@@ -18,8 +21,11 @@ const Shop = (props) => (
     <div className="title">
       <h2>SHOP</h2>
     </div>
+    <div className="store">
+      <StoreFront data={props.data.allSanityProduct}/>
+    </div>
   </Layout>
-)
+)}
 
 export default Shop;
 
@@ -29,6 +35,32 @@ export const pageQuery = graphql`
       childImageSharp {
         fluid(maxWidth: 1800){
           ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    allSanityProduct {
+      edges {
+        node {
+          title
+          id
+          slug {
+            current
+          }
+          defaultProductVariant {
+            price
+            images {
+              asset {
+                url
+              }
+            }
+          }
+          body {
+            en {
+              children {
+                text
+              }
+            }
+          }
         }
       }
     }

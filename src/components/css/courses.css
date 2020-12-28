@@ -46,3 +46,25 @@ margin-right: auto;
 max-width: 1000px;
 }
 
+.CourseCards{
+  align-items: center;
+  margin: 100px 40px 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 40px;
+  justify-items: center;
+  max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
+@media(max-width: 1070px){
+  .CourseCards{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media(max-width: 769px){
+  .CourseCards{
+    grid-template-columns: 1fr;
+  }
+}

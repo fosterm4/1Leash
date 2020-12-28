@@ -6,6 +6,17 @@ import '../components/css/index.css'
 
 const IndexPage = () => (
   <Layout>
+      <video
+        id="backgroundVideo"
+        loop
+        muted
+        autoPlay
+      >
+        <source
+          src={IndexVid}
+          type="video/mp4"
+        />
+      </video>
   </Layout>
 )
 

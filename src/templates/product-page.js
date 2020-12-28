@@ -10,7 +10,7 @@ export default function ProductPage({ pageContext }) {
     <Layout>
       <div className="ProductContent">
         <Zoom>
-          <img src={imageArray(pageContext)} />
+          <img src={imageArray(pageContext)} alt = {pageContext.product.title}/>
         </Zoom>
         <div className="Text">
           <h2>{pageContext.product.title}</h2>

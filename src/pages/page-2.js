@@ -3,7 +3,6 @@ import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import EmailList from "../components/email-list"
 import Product from "../components/product"
 import ContactForm from "../components/contact-form"
 

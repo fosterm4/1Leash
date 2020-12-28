@@ -1,5 +1,4 @@
 import React from "react"
-import { graphql } from 'gatsby'
 import Product from '../components/product'
 import '../components/css/store-front.css'
 import { Link } from "gatsby"

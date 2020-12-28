@@ -2,7 +2,7 @@ import React from "react"
 import '../components/css/product.css'
 
 const Product = props => (
-  <div className="Card">
+  <div className="ProductCard">
     <div className="front">
       <img alt="frontImg" src={props.image} height="200" />
       <h3>{props.productName}</h3>

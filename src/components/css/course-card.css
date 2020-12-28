@@ -9,17 +9,19 @@
   transition: all .7s linear;
 }
 
+
 .Card BackgroundImage {
   position: absolute;
   top: 0;
-  z-index: -1;
 }
 
 .Card h3{
+  position:absolute;
   color: black;
   font-size: 30px;
   margin: 20px 0 0 20px;
   width: 190px;
+  z-index: 100px;
 }
 
 .Card p{

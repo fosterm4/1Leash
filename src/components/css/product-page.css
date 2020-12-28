@@ -1,0 +1,27 @@
+
+.ProductContent{
+  margin: 100px 40px 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 40px;
+  justify-items: center;
+}
+@media(max-width: 769px){
+  .ProductContent{
+    grid-template-columns: 1fr;
+  }
+}
+
+Text button{
+  font-size: 20px;
+}
+h2{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.Text{
+  text-align: center;
+}
+p{
+  font-size: 18px;
+}

@@ -51,6 +51,9 @@ export const pageQuery = graphql`
             images {
               asset {
                 url
+                fluid {
+                  src
+                }
               }
             }
           }

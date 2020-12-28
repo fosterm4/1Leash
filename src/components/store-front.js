@@ -30,9 +30,11 @@ function imageArray(edge){
     if(imageIndex === 0){
       returnString = image.asset.url;
     }
+    else{
+      return returnString;
+    }
     imageIndex++;
   })}
-  console.log(returnString);
   return returnString;
 }
 

@@ -12,7 +12,7 @@ const StoreFront = data => {
         return (
           <div>
             <Link to = {"/shop/" + edge.node.slug.current}>
-              <Product price={"$"+edge.node.defaultProductVariant.price} productName={edge.node.title} description="" url={"/"+edge.node.slug.current} images={imageArray(edge)}/>
+              <Product price={"$"+edge.node.defaultProductVariant.price} productName={edge.node.title} image={imageArray(edge)}/>
             </Link>
           </div>
         )

@@ -1,18 +1,13 @@
 import React from "react"
-import { ProductCard } from "react-ui-cards"
 import '../components/css/product.css'
 
 const Product = props => (
-  <div>
-    <ProductCard
-      photos={[
-        props.images
-      ]}
-      price={props.price}
-      productName={props.productName}
-      description={props.description}
-      url={props.url}
-    />
+  <div className="Card">
+    <div className="front">
+      <img alt="frontImg" src={props.image} height="200" />
+      <h3>{props.productName}</h3>
+      <p>{props.price}</p>
+    </div>
   </div>
 )
 

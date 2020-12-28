@@ -14,7 +14,7 @@ const MobileHeader = () => {
     buttonText = "MY ACCOUNT";
   }
   return (
-    <div class="MobileMenu" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gridGap: 20 }}>
+    <div class="MobileMenu">
       <MobileMenu>
         <Link to="/aboutUs">ABOUT US</Link>
         <Link to="/courses">BUY THE COURSE</Link>

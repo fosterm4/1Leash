@@ -1,7 +1,6 @@
 import React from "react"
 
 import Layout from "../components/layout"
-import IndexVid from "../images/videos/medIndex.mp4"
 import '../components/css/index.css'
 import BackgroundImage from "gatsby-background-image"
 import MediaQuery from 'react-responsive'
@@ -9,23 +8,23 @@ import MediaQuery from 'react-responsive'
 const IndexPage = (props) => (
   <Layout>
     <MediaQuery query="(min-device-width: 769px)">
-      <video
-        id="backgroundVideo"
-        loop
-        muted
-        autoPlay
-      >
-        <source
-          src={IndexVid}
-          type="video/mp4"
-        />
-      </video>
+      <div className="webBackground">
+      <BackgroundImage
+          className="background"
+          fluid={props.data.backgroundImage1.childImageSharp.fluid}
+          backgroundColor={`#040e18`}
+          style={{
+            height: "740px"
+          }}
+        >
+        </BackgroundImage>
+      </div>
     </MediaQuery>
     <MediaQuery query="(max-device-width: 768px)">
-      <div className="indexImage">
+      <div className="mobileBackground">
         <BackgroundImage
           className="background"
-          fluid={props.data.backgroundImage.childImageSharp.fluid}
+          fluid={props.data.backgroundImage2.childImageSharp.fluid}
           backgroundColor={`#040e18`}
           style={{
             height: "665px"
@@ -41,7 +40,14 @@ export default IndexPage
 
 export const pageQuery = graphql`
   query {
-    backgroundImage: file(relativePath: { eq: "runPoint.jpg" }) {
+    backgroundImage1: file(relativePath: { eq: "runPointNoCrop.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1800){
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    backgroundImage2: file(relativePath: { eq: "runPoint.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1800){
           ...GatsbyImageSharpFluid

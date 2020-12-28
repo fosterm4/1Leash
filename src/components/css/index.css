@@ -25,11 +25,7 @@
   min-height: 100%;
 }
 
-.indexImage{
+.mobileBackground{
   width: 100%;
-  height: 665px;
-}
-
-.background{
   height: 665px;
 }

@@ -27,6 +27,9 @@ const IndexPage = (props) => (
           className="background"
           fluid={props.data.backgroundImage.childImageSharp.fluid}
           backgroundColor={`#040e18`}
+          style={{
+            height: "665px"
+          }}
         >
         </BackgroundImage>
       </div>

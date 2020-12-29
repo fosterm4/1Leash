@@ -4,9 +4,11 @@ import Layout from "../components/layout"
 import '../components/css/index.css'
 import BackgroundImage from "gatsby-background-image"
 import MediaQuery from 'react-responsive'
+import SEO from "../components/seo"
 
 const IndexPage = (props) => (
   <Layout>
+    <SEO title="Home" />
     <MediaQuery query="(min-device-width: 769px)">
       <div className="webBackground">
       <BackgroundImage

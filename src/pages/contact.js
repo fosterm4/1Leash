@@ -5,9 +5,11 @@ import '../components/css/contact.css'
 import { graphql } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 import ContactForm from "../components/contact-form"
+import SEO from "../components/seo"
 
 const Contact = (props) => (
   <Layout>
+    <SEO title="Contact" />
     <div className="background">
       <BackgroundImage
         className="background"

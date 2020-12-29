@@ -5,11 +5,13 @@ import '../components/css/shop.css'
 import { graphql } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 import StoreFront from "../components/store-front"
+import SEO from "../components/seo"
 
 const Shop = (props) => {
   console.log(props)
   return(
   <Layout>
+    <SEO title="Shop" />
     <div className="background">
       <BackgroundImage
         className="background"

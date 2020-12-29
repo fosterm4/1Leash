@@ -22,16 +22,12 @@ module.exports = {
         publicApiKey: 'MTYyN2M4Y2QtNzRkMC00YTQ4LThmOTYtMTg3M2FjOWRhMjllNjM3NDQ0NjYxOTMxODc1MTgw', // use public api key here or in environment variable
         openCartOnAdd: true,
         locales: {
-          fr: {
+          en: {
             actions: {
-              checkout: 'Valider le panier',
+              checkout: 'Checkout',
             },
           }
         },
-        innerHTML: `
-          <billing section="bottom">
-              <!-- Customization goes here -->
-          </billing>`,
       },
     },
     {

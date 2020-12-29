@@ -4,9 +4,11 @@ import Layout from "../components/layout"
 import '../components/css/aboutUs.css'
 import { graphql } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
+import SEO from "../components/seo"
 
 const AboutUs = (props) => (
   <Layout>
+    <SEO title="About Us" />
     <div className="background">
       <BackgroundImage
         className="background"

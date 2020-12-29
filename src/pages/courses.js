@@ -5,8 +5,11 @@ import '../components/css/courses.css'
 import { graphql } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 import CourseCard from "../components/course-card"
+import SEO from "../components/seo"
+
 const Courses = (props) => (
   <Layout>
+    <SEO title="Courses" />
     <div className="background">
       <BackgroundImage
         className="background"

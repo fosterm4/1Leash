@@ -3,11 +3,13 @@ import Layout from "../components/layout"
 import '../components/css/product-page.css'
 import Zoom from 'react-medium-image-zoom'
 import 'react-medium-image-zoom/dist/styles.css'
+import SEO from "../components/seo"
 
 export default function ProductPage({ pageContext }) {
   console.log(pageContext)
   return (
     <Layout>
+      <SEO title={pageContext.product.title} />
       <div className="ProductContent">
         <Zoom>
           <img src={imageArray(pageContext)} alt = {pageContext.product.title}/>

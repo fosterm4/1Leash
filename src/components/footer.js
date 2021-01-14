@@ -11,13 +11,13 @@ function Footer() {
       <p> Questions? <Link to="/contact">Contact us</Link>
       </p>
       <div className = "socialIcons">
-        <a id = "facebook" target="_blank"rel="noopener noreferrer" href="https://www.facebook.com/Ranch-to-Plate-101775518347698/">
+        <a id = "facebook" target="_blank"rel="noopener noreferrer" href="">
           <img src = {facebook} width = "20px" alt = "facebook"></img>
         </a>
-        <a target="_blank" rel="noopener noreferrer"href="https://www.youtube.com/channel/UCJwyCaWMxNht7F2qky4W9gA?view_as=subscriber">
+        <a target="_blank" rel="noopener noreferrer"href="">
           <img src = {youtube} width = "20px" alt = "youtube"></img>
         </a>
-        <a target="_blank" rel="noopener noreferrer"href="https://www.instagram.com/ranchtoplate/?hl=en">
+        <a target="_blank" rel="noopener noreferrer"href="">
           <img src = {instagram} width = "20px" alt = "instagram"></img>
         </a>
       </div>

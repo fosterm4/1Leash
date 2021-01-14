@@ -77,7 +77,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 30px;
+  margin-top: 10px;
 }
 
 #shopping-bag{

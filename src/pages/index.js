@@ -42,14 +42,14 @@ export default IndexPage
 
 export const pageQuery = graphql`
   query {
-    backgroundImage1: file(relativePath: { eq: "runPointNoCrop.jpg" }) {
+    backgroundImage1: file(relativePath: { eq: "frontpage.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1800){
           ...GatsbyImageSharpFluid
         }
       }
     }
-    backgroundImage2: file(relativePath: { eq: "runPoint.jpg" }) {
+    backgroundImage2: file(relativePath: { eq: "frontpage.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1800){
           ...GatsbyImageSharpFluid

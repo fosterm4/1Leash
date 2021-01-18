@@ -6,11 +6,12 @@ import BackgroundImage from "gatsby-background-image"
 import MediaQuery from 'react-responsive'
 import SEO from "../components/seo"
 import { Link } from "gatsby"
+import fieldPoint from "../images/fieldpoint.jpg"
 
 const IndexPage = (props) => (
   <Layout>
     <SEO title="Home" />
-    <div>
+    <div className="indexBackground">
       <MediaQuery query="(min-device-width: 769px)">
         <div className="webBackground">
           <BackgroundImage
@@ -38,21 +39,28 @@ const IndexPage = (props) => (
         </div>
       </MediaQuery>
     </div>
+    <div className="indexTitle">
+      <h2>GUNDOGGIN'</h2>
+    </div>
     <div className="AboutUs">
       <h2>WELCOME TO GUNDOGGIN’</h2>
-      <h3>(GUN DOGGIN’) - Verb</h3>
-      <ol type="1">
-        <li>Running Gun Dogs</li>
-        <li>Daily Care of Gun Dogs</li>
-        <li>Hunting Gun Dogs</li>
-        <li>Paying Vet Bills</li>
-        <li>Buying Gun Dog Gear</li>
-        <li>Replacing Destroyed Personal Belongings </li>
-        <li>Buying new Gun Dog approved vehicles.</li>
-        <li>Counting down the days until Hunting Season</li>
-        <li>Sharing your best and worst days in the Field</li>
-        <li><b>A Lifestyle</b></li>
-      </ol>
+      <div className="fieldPic">
+        <ol type="1">
+          <h3>(<i>GUN DOGGIN’</i>) - Verb</h3>
+          <li>Running Gun Dogs</li>
+          <li>Daily Care of Gun Dogs</li>
+          <li>Hunting Gun Dogs</li>
+          <li>Paying Vet Bills</li>
+          <li>Buying Gun Dog Gear</li>
+          <li>Replacing Destroyed Personal Belongings </li>
+          <li>Buying new Gun Dog approved vehicles.</li>
+          <li>Counting down the days until Hunting Season</li>
+          <li>Sharing your best and worst days in the Field</li>
+          <li><b>A Lifestyle</b></li>
+        </ol>
+        <img src={fieldPoint} />
+      </div>
+
       <p>GUNDOGGIN offers you everything you need to train one of the most POWERFUL GUNDOGS in the game. Our goal is to “Train the Trainer” so you no longer have to send your partner in crime away to the kennel. Our program goes in depth on how to take a puppy from the moment you pick them up to a full finished bird hunting MACHINE. We want to develop dogs that can go the distance and now is your chance to learn all the tricks of the trade. </p>
       <h3>GUNDOGGIN’ ACADEMY will be offered in 5 parts:</h3>
       <ul>
@@ -71,14 +79,14 @@ export default IndexPage
 
 export const pageQuery = graphql`
   query {
-    backgroundImage1: file(relativePath: { eq: "frontpage.jpg" }) {
+    backgroundImage1: file(relativePath: { eq: "intense.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1800){
           ...GatsbyImageSharpFluid
         }
       }
     }
-    backgroundImage2: file(relativePath: { eq: "frontpage.jpg" }) {
+    backgroundImage2: file(relativePath: { eq: "intense.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1800){
           ...GatsbyImageSharpFluid

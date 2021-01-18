@@ -15,7 +15,8 @@ const WebHeader = () => {
     return (
       <div className="Header">
         <div className="HeaderGroup">
-          <Link to="/courses">GUNDOGGIN ACADEMY</Link>
+        <Link to="/courses">GUNDOGGIN ACADEMY</Link>
+          <Link to="/">HOME</Link>
           <Link to="/"><img src={logo} width="100" alt="logo" /></Link>
           <Link to="/shop">SHOP</Link>
           <Link><button className="snipcart-customer-signin">{buttonText}</button></Link>

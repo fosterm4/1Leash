@@ -17,6 +17,7 @@ const MobileHeader = () => {
     <div class="MobileMenu">
       <MobileMenu>
         <Link to="/courses">GUNDOGGIN ACADEMY</Link>
+        <Link to="/">HOME</Link>
         <Link to="/shop">SHOP</Link>
         <Link><button className="snipcart-customer-signin">{buttonText}</button></Link>
       </MobileMenu>

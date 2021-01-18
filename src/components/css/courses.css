@@ -68,3 +68,38 @@ max-width: 1000px;
     grid-template-columns: 1fr;
   }
 }
+
+.ValhallaInfo{
+  align-items: center;
+  display: grid;
+  grid-gap: 40px;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center; max-width: 1500px;
+  margin: 0 auto;
+}
+
+.AboutTrainer{
+  text-align: center;
+  margin: 0 auto;
+}
+
+.RussInfo{
+  text-align: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+h3{
+  margin-top: 40px;
+}
+
+@media(max-width: 769px){
+  .ValhallaInfo{
+    grid-template-columns: 1fr;
+  }
+}
+
+ul{
+  max-width: 500px;
+  margin: 0 auto;
+}

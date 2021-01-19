@@ -12,11 +12,11 @@ const IndexPage = (props) => (
   <Layout>
     <SEO title="Home" />
     <div className="indexBackground">
-      <MediaQuery query="(min-device-width: 769px)">
+    <MediaQuery query="(min-device-width: 1440px)">
         <div className="webBackground">
           <BackgroundImage
             className="background"
-            fluid={props.data.backgroundImage1.childImageSharp.fluid}
+            fluid={props.data.backgroundImage2.childImageSharp.fluid}
             backgroundColor={`#040e18`}
             style={{
               height: "740px"
@@ -25,11 +25,11 @@ const IndexPage = (props) => (
           </BackgroundImage>
         </div>
       </MediaQuery>
-      <MediaQuery query="(max-device-width: 768px)">
+      <MediaQuery query="(max-device-width: 1439px)">
         <div className="mobileBackground">
           <BackgroundImage
             className="background"
-            fluid={props.data.backgroundImage2.childImageSharp.fluid}
+            fluid={props.data.backgroundImage1.childImageSharp.fluid}
             backgroundColor={`#040e18`}
             style={{
               height: "665px"
@@ -86,7 +86,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    backgroundImage2: file(relativePath: { eq: "intense.jpg" }) {
+    backgroundImage2: file(relativePath: { eq: "pile.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1800){
           ...GatsbyImageSharpFluid

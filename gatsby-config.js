@@ -34,7 +34,7 @@ module.exports = {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {
-          families: ['Proxima Nova']
+          families: ['Helvetica Neue', 'Alegreya']
         }
       }
     },

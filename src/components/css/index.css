@@ -46,7 +46,19 @@ ol{
   padding-bottom: 20px;
 }
 
-.fieldPic{
+#swivelText{
+  max-width: 500px;
+}
+
+#swivelText p{
+  font-size: 30px;
+}
+
+#swivelText h3{
+  font-size: 40px;
+}
+
+.swivelPic{
   align-items: center;
   display: grid;
   grid-gap: 40px;
@@ -62,7 +74,7 @@ ul{
   text-align: left;
 }
 
-.fieldPic img{
+.swivelPic img{
   max-width: 800px;
   width: 90%;
   height: auto;

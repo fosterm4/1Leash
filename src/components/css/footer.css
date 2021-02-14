@@ -1,10 +1,14 @@
 .copyright{
   text-align: center;
+  color: white;
 }
 
+.mainFooter p{
+  color: white;
+}
 .mainFooter{
   padding-top: 5px;
-  background-color: rgba(223, 219, 219, 0.534);
+  background-color: rgba(0, 48, 135, 1);
   box-shadow: 0 50vh 0 50vh rgba(223, 219, 219, 0.534);
   text-align: center;
   width: 100%;
@@ -34,4 +38,8 @@
   .mainFooter{
     font-size: 15px;
   }
+}
+
+.mainFooter a{
+  font-size: 20px;
 }

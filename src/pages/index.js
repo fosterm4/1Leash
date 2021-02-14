@@ -6,7 +6,8 @@ import BackgroundImage from "gatsby-background-image"
 import MediaQuery from 'react-responsive'
 import SEO from "../components/seo"
 import { Link } from "gatsby"
-import fieldPoint from "../images/fieldpoint.jpg"
+import swivel from "../images/swivel.jpg"
+import sponsors from "../images/sponsors.jpg"
 
 const IndexPage = (props) => (
   <Layout>
@@ -40,37 +41,20 @@ const IndexPage = (props) => (
       </MediaQuery>
     </div>
     <div className="indexTitle">
-      <h2>GUNDOGGIN'</h2>
+      <h2>1Leash</h2>
     </div>
     <div className="AboutUs">
-      <h2>WELCOME TO GUNDOGGIN’</h2>
-      <div className="fieldPic">
-        <ol type="1">
-          <h3>(<i>GUN DOGGIN’</i>) - Verb</h3>
-          <li>Running Gun Dogs</li>
-          <li>Daily Care of Gun Dogs</li>
-          <li>Hunting Gun Dogs</li>
-          <li>Paying Vet Bills</li>
-          <li>Buying Gun Dog Gear</li>
-          <li>Replacing Destroyed Personal Belongings </li>
-          <li>Buying new Gun Dog approved vehicles.</li>
-          <li>Counting down the days until Hunting Season</li>
-          <li>Sharing your best and worst days in the Field</li>
-          <li><b>A Lifestyle</b></li>
-        </ol>
-        <img src={fieldPoint} />
+      <h2>Multiple dogs. One leash. Easier walks.</h2>
+      <div className="swivelPic">
+        <div id="swivelText">
+          <h3>The secret is in the patented swivel...</h3>
+          <p>This patented swivel feature allows for both dogs to walk or run completely tangle free.</p>
+        </div>
+        <img src={swivel} />
       </div>
 
-      <p>GUNDOGGIN offers you everything you need to train one of the most POWERFUL GUNDOGS in the game. Our goal is to “Train the Trainer” so you no longer have to send your partner in crime away to the kennel. Our program goes in depth on how to take a puppy from the moment you pick them up to a full finished bird hunting MACHINE. We want to develop dogs that can go the distance and now is your chance to learn all the tricks of the trade. </p>
-      <h3>GUNDOGGIN’ ACADEMY will be offered in 5 parts:</h3>
-      <ul>
-        <li>INTRO</li>
-        <li>BUILDING DRIVE</li>
-        <li>OBEDIENCE IN THE FIELD AND HOME</li>
-        <li>ADVANCED</li>
-        <li>EXPERT</li>
-      </ul>
-      <p>Learn more about each course on our <Link to="/courses">GUNDOGGIN’ ACADEMY</Link> page.</p>
+      <h2>As seen and featured in the following places...</h2>
+      <img src={sponsors} />
     </div>
   </Layout>
 )

@@ -22,7 +22,7 @@ function Footer() {
         </a>
       </div>
       < p className = "copyright">
-        &copy;{new Date().getFullYear()} www.Gundoggin.com
+        &copy;{new Date().getFullYear()} www.1Leash.co
       </p>
     </div>
   );

@@ -1,7 +1,7 @@
 import React, {useContext} from "react"
 import { slide as MobileMenu } from 'react-burger-menu'
 import "./css/mobile-header.css"
-import logo from '../images/gundogginlogotrans(1).png'
+import logo from '../images/gatsby-icon.png'
 import bag from '../images/shopping-bag-black.png'
 import { Link } from "gatsby"
 import { SnipcartContext } from 'gatsby-plugin-snipcart-advanced/context';

@@ -1,10 +1,10 @@
 {
   "root": true,
   "project": {
-    "name": "gundoggin"
+    "name": "1Leash"
   },
   "api": {
-    "projectId": "xkbrerkt",
+    "projectId": "88evuh9f",
     "dataset": "production"
   },
   "plugins": [

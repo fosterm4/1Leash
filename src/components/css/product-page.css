@@ -1,4 +1,4 @@
-
+@import "~react-image-gallery/styles/css/image-gallery.css";
 .ProductContent{
   align-items: center;
   margin: 100px 40px 100px;
@@ -15,6 +15,14 @@
   .ProductContent{
     grid-template-columns: 1fr;
   }
+}
+
+.ProductGallery{
+  max-width: 350px;
+}
+
+#addToCart{
+  margin-bottom: 40px;
 }
 
 Text button{

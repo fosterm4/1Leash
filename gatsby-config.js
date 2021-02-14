@@ -2,16 +2,16 @@ const path = require(`path`)
 
 module.exports = {
   siteMetadata: {
-    title: `Gundoggin`,
-    description: `The best place on the web to find supplies and learn how to train your bird dog.`,
-    keywords: 'gundog, gundoggin, dog, german shorthair pointer, gsp, dog training, gundog training',
+    title: `1Leash`,
+    description: `Multiple dogs. One leash, easier walks.`,
+    keywords: 'leash, dog, cat, two dog leash, three dog leash, 1leash, one leash, 1 leash, 1 dog leash, 2 dog leash, 3 dog leash, multiple dog leash',
     author: `Michael Foster`,
   },
   plugins: [
     {
       resolve: "gatsby-source-sanity",
       options: {
-        projectId: "xkbrerkt",
+        projectId: "88evuh9f",
         dataset: "production",
       },
     },
@@ -19,7 +19,7 @@ module.exports = {
       resolve: `gatsby-plugin-snipcart-advanced`,
       options: {
         version: '3.0.15',
-        publicApiKey: 'MTYyN2M4Y2QtNzRkMC00YTQ4LThmOTYtMTg3M2FjOWRhMjllNjM3NDQ0NjYxOTMxODc1MTgw', // use public api key here or in environment variable
+        publicApiKey: 'ODQyN2U3OGEtYmE4ZS00NGE3LWIwZWUtODA0MGMwMzkxZDllNjM3NDg4NTQ0OTExOTYzNTk3', // use public api key here or in environment variable
         openCartOnAdd: true,
         locales: {
           en: {
@@ -57,7 +57,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gundogginlogotrans(1).png`, // This path is relative to the root of the site.
+        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

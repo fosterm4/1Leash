@@ -1,28 +1,29 @@
 import React from "react"
 import Layout from "../components/layout"
 import '../components/css/product-page.css'
-import Zoom from 'react-medium-image-zoom'
 import 'react-medium-image-zoom/dist/styles.css'
 import SEO from "../components/seo"
+import ImageGallery from 'react-image-gallery';
 
 export default function ProductPage({ pageContext }) {
-  console.log(pageContext)
-  return (
+  let images = getImageArray(pageContext);
+  console.log(images);
+  return(
     <Layout>
       <SEO title={pageContext.product.title} />
       <div className="ProductContent">
-        <Zoom>
-          <img src={imageArray(pageContext)} alt = {pageContext.product.title}/>
-        </Zoom>
+        <div className="ProductGallery">
+          <ImageGallery items={images} showFullscreenButton={false} lazyLoad={true} showPlayButton={false} />
+        </div>
         <div className="Text">
           <h2>{pageContext.product.title}</h2>
           <h4>{"$" + pageContext.product.defaultProductVariant.price}</h4>
-          <button className="snipcart-add-item"
+          <button id = "addToCart" className="snipcart-add-item"
             data-item-id={pageContext.product.slug.current}
             data-item-price={pageContext.product.defaultProductVariant.price}
             data-item-url={"/shop/" + pageContext.product.slug.current}
             data-item-name={pageContext.product.title}
-            data-item-image={imageArray(pageContext)}>
+            data-item-image={mainImage(pageContext)}>
             Add to Cart
           </button>
           <p>{descriptionArray(pageContext)}</p>
@@ -56,7 +57,7 @@ function descriptionArray(edge) {
   return returnString;
 }
 
-function imageArray(edge) {
+function mainImage(edge) {
   let returnString = "";
   let imageIndex = 0;
   {
@@ -72,4 +73,16 @@ function imageArray(edge) {
   }
   console.log(returnString);
   return returnString;
+}
+
+function getImageArray(edge){
+  let returnArray =[];
+  edge.product.defaultProductVariant.images.map(image => {
+    let imgSrc = image.asset.url;
+    returnArray.push(  {
+      original: imgSrc,
+      thumbnail: imgSrc,
+    })
+  })
+  return returnArray;
 }

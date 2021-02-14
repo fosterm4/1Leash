@@ -1,6 +1,6 @@
 import { Link } from "gatsby"
 import React, { useContext } from "react"
-import logo from '../images/gundogginlogotrans(1).png'
+import logo from '../images/gatsby-icon.png'
 import bag from '../images/shopping-bag-black.png'
 import './css/web-header.css'
 import { SnipcartContext } from 'gatsby-plugin-snipcart-advanced/context';

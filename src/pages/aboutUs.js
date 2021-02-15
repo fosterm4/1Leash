@@ -52,7 +52,7 @@ export default AboutUs;
 
 export const pageQuery = graphql`
   query {
-    backgroundImage: file(relativePath: { eq: "stoic.jpg" }) {
+    backgroundImage: file(relativePath: { eq: "aboutUs.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1800){
           ...GatsbyImageSharpFluid

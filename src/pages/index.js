@@ -5,19 +5,19 @@ import '../components/css/index.css'
 import BackgroundImage from "gatsby-background-image"
 import MediaQuery from 'react-responsive'
 import SEO from "../components/seo"
-import { Link } from "gatsby"
 import swivel from "../images/swivel.jpg"
 import sponsors from "../images/sponsors.jpg"
+import ImageGallery from 'react-image-gallery';
 
 const IndexPage = (props) => (
   <Layout>
     <SEO title="Home" />
     <div className="indexBackground">
-    <MediaQuery query="(min-device-width: 1440px)">
+      <MediaQuery query="(min-device-width: 1440px)">
         <div className="webBackground">
           <BackgroundImage
             className="background"
-            fluid={props.data.backgroundImage2.childImageSharp.fluid}
+            fluid={props.data.backgroundImage1.childImageSharp.fluid}
             backgroundColor={`#040e18`}
             style={{
               height: "740px"
@@ -55,25 +55,47 @@ const IndexPage = (props) => (
 
       <h2>As seen and featured in the following places...</h2>
       <img src={sponsors} />
+      <h2>Happy customers enjoying 1Leash below...</h2>
+      <div>
+        <ImageGallery items={GalleryArray(props)} showFullscreenButton={false} lazyLoad={true} showPlayButton={false} />
+      </div>
     </div>
   </Layout>
 )
 
 export default IndexPage
 
+function GalleryArray(props) {
+  console.log("PROPS");
+  console.log(props.data.allSanityGallery.edges[0].node.images);
+  let returnArray =[];
+  props.data.allSanityGallery.edges[0].node.images.map(image => {
+    let imgSrc = image.asset.url;
+    returnArray.push(  {
+      original: imgSrc,
+      thumbnail: imgSrc,
+    })
+  })
+  return returnArray;
+}
+
 export const pageQuery = graphql`
   query {
-    backgroundImage1: file(relativePath: { eq: "intense.jpg" }) {
+    backgroundImage1: file(relativePath: { eq: "indexBackground.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1800){
           ...GatsbyImageSharpFluid
         }
       }
     }
-    backgroundImage2: file(relativePath: { eq: "pile.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 1800){
-          ...GatsbyImageSharpFluid
+    allSanityGallery {
+      edges {
+        node {
+          images {
+            asset {
+              url
+            }
+          }
         }
       }
     }

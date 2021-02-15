@@ -31,7 +31,7 @@ export default Contact;
 
 export const pageQuery = graphql`
   query {
-    backgroundImage: file(relativePath: { eq: "whitepoint.jpg" }) {
+    backgroundImage: file(relativePath: { eq: "contactUs.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1800){
           ...GatsbyImageSharpFluid

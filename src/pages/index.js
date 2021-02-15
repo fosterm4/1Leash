@@ -50,11 +50,11 @@ const IndexPage = (props) => (
           <h3>The secret is in the patented swivel...</h3>
           <p>This patented swivel feature allows for both dogs to walk or run completely tangle free.</p>
         </div>
-        <img src={swivel} />
+        <img src={swivel} alt="swivel"/>
       </div>
 
       <h2>As seen and featured in the following places...</h2>
-      <img src={sponsors} />
+      <img src={sponsors} alt="sponsors"/>
       <h2>Happy customers enjoying 1Leash below...</h2>
       <div>
         <ImageGallery items={GalleryArray(props)} showFullscreenButton={false} lazyLoad={true} showPlayButton={false} />

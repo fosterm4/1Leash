@@ -4,10 +4,9 @@ import Layout from "../components/layout"
 import '../components/css/aboutUs.css'
 import { graphql } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
-import CourseCard from "../components/course-card"
+import Card from "../components/card"
 import SEO from "../components/seo"
 import Project from '../images/project.jpg'
-import Russ from "../images/flush.jpg"
 const AboutUs = (props) => (
   <Layout>
     <SEO title="About Us" />
@@ -29,7 +28,7 @@ const AboutUs = (props) => (
           <p>A school project in which the objective was to create something innovative that made peoples lives easier. That was the inception of the Double Dog Leash, and from the first prototype to our finished product, we have been dedicated to giving multiple dog owners the best tangle free dog walking solution.</p>
         </div>
         <div id="projectImg">
-          <img src={Project} />
+          <img src={Project} alt="school project"/>
         </div>
       </div>
       <div className="PeopleInfo">
@@ -38,10 +37,10 @@ const AboutUs = (props) => (
       </div>
     </div>
     <div className="PeopleCards">
-      <CourseCard title="Michael Mann" description="Michael is currently a redshirt junior and plays for the Duke University football team. Michael is studying Visual Media Studies and Markets and Management. Michael is set to graduate it 2017."
+      <Card title="Michael Mann" description="Michael is currently a redshirt junior and plays for the Duke University football team. Michael is studying Visual Media Studies and Markets and Management. Michael is set to graduate it 2017."
         image={props.data.michaelmann.childImageSharp.fluid}
       />
-      <CourseCard title="Preston Mann" description="Preston just graduated from CU, while double majoring in Economics and Chemistry. Preston is in the process of his next entrepreneurial venture, as he hopes to create a luxury fast casual sushi restaurant."
+      <Card title="Preston Mann" description="Preston just graduated from CU, while double majoring in Economics and Chemistry. Preston is in the process of his next entrepreneurial venture, as he hopes to create a luxury fast casual sushi restaurant."
         image={props.data.prestonmann.childImageSharp.fluid}
       />
     </div>

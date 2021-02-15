@@ -21,8 +21,8 @@ const MobileHeader = () => {
         <Link to="/shop">Shop</Link>
         <Link><button className="snipcart-customer-signin">{buttonText}</button></Link>
       </MobileMenu>
-      <Link id="logo" to="/"><img src={logo} width="80" alt="logo" /></Link>
-      <Link id="shopping-bag"><img src={bag} width="40" alt="bag" className="snipcart-checkout" /></Link>
+      <Link id="logo" to="/"><img src={logo} width="40" alt="logo" /></Link>
+      <Link id="shopping-bag"><img src={bag} width="35" alt="bag" className="snipcart-checkout" /></Link>
     </div>
   )
 }

@@ -33,7 +33,7 @@ const AboutUs = (props) => (
       </div>
       <div className="PeopleInfo">
         <h2>Meet the family behind 1Leash</h2>
-        <p>We really are a family business! There is nothing better in our opinion then creating something that you are passionate about with people you care about, while having fun selling a product you believe in.</p>
+        <p id="familyBusiness">We really are a family business! There is nothing better in our opinion then creating something that you are passionate about with people you care about, while having fun selling a product you believe in.</p>
       </div>
     </div>
     <div className="PeopleCards">

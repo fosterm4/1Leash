@@ -70,6 +70,12 @@ ol{
   padding-right: 10px;;
 }
 
+@media(max-width: 769px){
+  .swivelPic{
+    grid-template-columns: 1fr;
+  }
+}
+
 ul{
   text-align: left;
 }

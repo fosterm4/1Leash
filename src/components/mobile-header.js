@@ -16,7 +16,7 @@ const MobileHeader = () => {
   return (
     <div class="MobileMenu">
       <MobileMenu>
-        <Link to="/aboutus">About Us</Link>
+        <Link to="/aboutUs">About Us</Link>
         <Link to="/">Home</Link>
         <Link to="/shop">Shop</Link>
         <Link><button className="snipcart-customer-signin">{buttonText}</button></Link>

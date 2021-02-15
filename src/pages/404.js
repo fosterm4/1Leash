@@ -25,7 +25,7 @@ export default PageNotFound;
 
 export const pageQuery = graphql`
   query {
-    backgroundImage: file(relativePath: { eq: "droneHunter.jpg" }) {
+    backgroundImage: file(relativePath: { eq: "indexBackground.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1800){
           ...GatsbyImageSharpFluid

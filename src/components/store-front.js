@@ -4,11 +4,9 @@ import '../components/css/store-front.css'
 import { Link } from "gatsby"
 
 const StoreFront = data => {
-  console.log(data.data.edges)
   return (
     <div className="StoreFront">
       {data.data.edges.map(edge => {
-        console.log(edge.node.defaultProductVariant.images)
         return (
           <div>
             <Link to = {"/shop/" + edge.node.slug.current}>

@@ -1,4 +1,4 @@
-import React, {useContext} from "react"
+import React, { useContext } from "react"
 import { slide as MobileMenu } from 'react-burger-menu'
 import "./css/mobile-header.css"
 import logo from '../images/gatsby-icon.png'
@@ -16,12 +16,12 @@ const MobileHeader = () => {
   return (
     <div class="MobileMenu">
       <MobileMenu>
-        <Link to="/aboutUs">About Us</Link>
         <Link to="/">Home</Link>
         <Link to="/shop">Shop</Link>
+        <Link to="/aboutUs">About Us</Link>
         <Link><button className="snipcart-customer-signin">{buttonText}</button></Link>
       </MobileMenu>
-      <Link id="logo" to="/"><img src={logo} width="40" alt="logo" /></Link>
+      <div></div>
       <Link id="shopping-bag"><img src={bag} width="35" alt="bag" className="snipcart-checkout" /></Link>
     </div>
   )

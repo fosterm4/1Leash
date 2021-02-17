@@ -9,6 +9,7 @@
 
 #projectImg {
   margin: 20px;
+  max-width: 420px;
 }
 
 #projectText p{
@@ -16,6 +17,7 @@
 }
 
 #projectText{
+  margin-top: 10px;
   max-width: 500px;
 }
 
@@ -33,9 +35,6 @@
   background:rgba(0, 0, 0, 0.479);
 }
 
-#familyBusiness{
-  margin: 20px;;
-}
 
 .title {
   text-align: center;
@@ -66,7 +65,7 @@ h1{
 }
 
 .LeashInfo{
-  align-items: center;
+  align-items: top;
   display: grid;
   grid-gap: 40px;
   grid-template-columns: 1fr 1fr;

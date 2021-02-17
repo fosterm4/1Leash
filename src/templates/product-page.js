@@ -21,7 +21,7 @@ export default function ProductPage({ pageContext }) {
           <button id = "addToCart" className="snipcart-add-item"
             data-item-id={pageContext.product.slug.current}
             data-item-price={pageContext.product.defaultProductVariant.price}
-            data-item-url={"/shop/" + pageContext.product.slug.current}
+            data-item-url={"https://www.1leash.co/shop/" + pageContext.product.slug.current}
             data-item-name={pageContext.product.title}
             data-item-image={mainImage(pageContext)}>
             Add to Cart

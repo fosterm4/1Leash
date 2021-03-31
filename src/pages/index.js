@@ -7,7 +7,11 @@ import MediaQuery from 'react-responsive'
 import SEO from "../components/seo"
 import swivel from "../images/swivel.jpg"
 import sponsors from "../images/sponsors.jpg"
-import ImageGallery from 'react-image-gallery';
+import Product from '../components/product'
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+import { Link } from "gatsby";
+import StoreFront from "../components/store-front"
 
 const IndexPage = (props) => (
   <Layout>
@@ -20,7 +24,7 @@ const IndexPage = (props) => (
             fluid={props.data.backgroundImage1.childImageSharp.fluid}
             backgroundColor={`#040e18`}
             style={{
-              height: "400px"
+              height: "450px"
             }}
           >
           </BackgroundImage>
@@ -50,15 +54,13 @@ const IndexPage = (props) => (
           <h3>The secret is in the swivel...</h3>
           <p>This patented swivel feature allows for both dogs to walk or run completely tangle free.</p>
         </div>
-        <img src={swivel} alt="swivel"/>
+        <img src={swivel} alt="swivel" />
       </div>
 
       <h2>As seen and featured in the following places...</h2>
-      <img src={sponsors} alt="sponsors"/>
-      <h2>Happy customers enjoying 1Leash below...</h2>
-      <div>
-        <ImageGallery items={GalleryArray(props)} showFullscreenButton={false} lazyLoad={true} showPlayButton={false} />
-      </div>
+      <img src={sponsors} alt="sponsors" />
+      <h2>View our products below...</h2>
+      <StoreFront data={props.data.allSanityProduct}/>
     </div>
   </Layout>
 )
@@ -68,10 +70,10 @@ export default IndexPage
 function GalleryArray(props) {
   console.log("PROPS");
   console.log(props.data.allSanityGallery.edges[0].node.images);
-  let returnArray =[];
+  let returnArray = [];
   props.data.allSanityGallery.edges[0].node.images.map(image => {
     let imgSrc = image.asset.url;
-    returnArray.push(  {
+    returnArray.push({
       original: imgSrc,
       thumbnail: imgSrc,
     })
@@ -81,7 +83,7 @@ function GalleryArray(props) {
 
 export const pageQuery = graphql`
   query {
-    backgroundImage1: file(relativePath: { eq: "indexBackground.jpg" }) {
+    backgroundImage1: file(relativePath: { eq: "shop.jpeg" }) {
       childImageSharp {
         fluid(maxWidth: 1800){
           ...GatsbyImageSharpFluid
@@ -94,6 +96,35 @@ export const pageQuery = graphql`
           images {
             asset {
               url
+            }
+          }
+        }
+      }
+    }
+    allSanityProduct {
+      edges {
+        node {
+          title
+          id
+          slug {
+            current
+          }
+          defaultProductVariant {
+            price
+            images {
+              asset {
+                url
+                fluid {
+                  src
+                }
+              }
+            }
+          }
+          body {
+            en {
+              children {
+                text
+              }
             }
           }
         }

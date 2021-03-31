@@ -48,11 +48,11 @@ const IndexPage = (props) => (
       <h2>1Leash</h2>
     </div>
     <div className="AboutUs">
-      <h2>Multiple dogs. One leash. Easier walks.</h2>
+      <h2>More dogs. One leash. Better walks.</h2>
       <div className="swivelPic">
         <div id="swivelText">
           <h3>The secret is in the swivel...</h3>
-          <p>This patented swivel feature allows for both dogs to walk or run completely tangle free.</p>
+          <p>This unique swivel feature allows for both dogs to walk or run completely tangle free.</p>
         </div>
         <img src={swivel} alt="swivel" />
       </div>

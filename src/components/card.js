@@ -5,14 +5,16 @@ import BackgroundImage from "gatsby-background-image"
 const Card = props => (
   <div className="Card">
     <div className="front">
-      <BackgroundImage
-        className="background"
-        fluid={props.image}
-        backgroundColor={`#040e18`}
-      />
+      <div className="profileImage">
+        <BackgroundImage
+          className="background"
+          fluid={props.image}
+          backgroundColor={`#040e18`}
+        />
+      </div>
       <h3>{props.title}</h3>
       <h4>{props.dogName}</h4>
-      <p>{props.description.replace(/\\n/g,'\n')}</p>
+      <p>{props.description.replace(/\\n/g, '\n')}</p>
     </div>
   </div>
 )

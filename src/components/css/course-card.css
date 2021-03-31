@@ -9,6 +9,9 @@
   transition: all .7s linear;
 }
 
+.profileImage{
+  margin-bottom: -70px;
+}
 
 .Card BackgroundImage {
   position: absolute;

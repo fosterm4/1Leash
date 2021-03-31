@@ -11,7 +11,8 @@ const Card = props => (
         backgroundColor={`#040e18`}
       />
       <h3>{props.title}</h3>
-      <p>{props.description}</p>
+      <h4>{props.dogName}</h4>
+      <p>{props.description.replace(/\\n/g,'\n')}</p>
     </div>
   </div>
 )

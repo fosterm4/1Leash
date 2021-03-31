@@ -1,7 +1,7 @@
 import React, { useContext } from "react"
 import { slide as MobileMenu } from 'react-burger-menu'
 import "./css/mobile-header.css"
-import logo from '../images/gatsby-icon.png'
+import logo from '../images/oneleashlogo.png'
 import bag from '../images/shopping-bag-white.png'
 import { Link } from "gatsby"
 import { SnipcartContext } from 'gatsby-plugin-snipcart-advanced/context';
@@ -21,8 +21,8 @@ const MobileHeader = () => {
         <Link to="/aboutUs">About Us</Link>
         <Link><button className="snipcart-customer-signin">{buttonText}</button></Link>
       </MobileMenu>
-      <div></div>
-      <Link id="shopping-bag"><img src={bag} width="35" alt="bag" className="snipcart-checkout" /></Link>
+      <Link to="/" id="logo"><img src={logo} width="120" alt="bag"/></Link>
+      <Link id="shopping-bag"><img src={bag} width="70" alt="bag" className="snipcart-checkout" /></Link>
     </div>
   )
 }

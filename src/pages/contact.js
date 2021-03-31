@@ -15,6 +15,9 @@ const Contact = (props) => (
         className="background"
         fluid={props.data.backgroundImage.childImageSharp.fluid}
         backgroundColor={`#040e18`}
+        style={{
+          height: "500px"
+        }}
       >
       </BackgroundImage>
     </div>
@@ -31,7 +34,7 @@ export default Contact;
 
 export const pageQuery = graphql`
   query {
-    backgroundImage: file(relativePath: { eq: "contactUs.jpg" }) {
+    backgroundImage: file(relativePath: { eq: "pups.jpeg" }) {
       childImageSharp {
         fluid(maxWidth: 1800){
           ...GatsbyImageSharpFluid

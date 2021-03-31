@@ -7,10 +7,8 @@ import MediaQuery from 'react-responsive'
 import SEO from "../components/seo"
 import swivel from "../images/swivel.jpg"
 import sponsors from "../images/sponsors.jpg"
-import Product from '../components/product'
-import Carousel from "react-multi-carousel";
+import VideoPlayer from '../components/videoPlayer'
 import "react-multi-carousel/lib/styles.css";
-import { Link } from "gatsby";
 import StoreFront from "../components/store-front"
 
 const IndexPage = (props) => (
@@ -48,16 +46,17 @@ const IndexPage = (props) => (
       <h2>1Leash</h2>
     </div>
     <div className="AboutUs">
-      <h2>More dogs. One leash. Better walks.</h2>
+      <h1>More dogs. One leash. Better walks.</h1>
       <div className="swivelPic">
         <div id="swivelText">
           <h3>The secret is in the swivel...</h3>
           <p>This unique swivel feature allows for both dogs to walk or run completely tangle free.</p>
         </div>
-        <img src={swivel} alt="swivel" />
+        <VideoPlayer url='https://youtu.be/CS1-5boAqLI' />
       </div>
-
-      <h2>As seen and featured in the following places...</h2>
+      <div id="seenIn">
+        <h2>As seen and featured in the following places...</h2>
+      </div>
       <img src={sponsors} alt="sponsors" />
       <h2>View our products below...</h2>
       <StoreFront data={props.data.allSanityProduct}/>

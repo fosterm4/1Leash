@@ -4,11 +4,12 @@ import '../components/css/product-page.css'
 import 'react-medium-image-zoom/dist/styles.css'
 import SEO from "../components/seo"
 import ImageGallery from 'react-image-gallery';
+import VideoPlayer from '../components/videoPlayer';
 
 export default function ProductPage({ pageContext }) {
   let images = getImageArray(pageContext);
   console.log(images);
-  return(
+  return (
     <Layout>
       <SEO title={pageContext.product.title} />
       <div className="ProductContent">
@@ -18,7 +19,7 @@ export default function ProductPage({ pageContext }) {
         <div className="Text">
           <h2>{pageContext.product.title}</h2>
           <h4>{"$" + pageContext.product.defaultProductVariant.price}</h4>
-          <button id = "addToCart" className="snipcart-add-item"
+          <button id="addToCart" className="snipcart-add-item"
             data-item-id={pageContext.product.slug.current}
             data-item-price={pageContext.product.defaultProductVariant.price}
             data-item-url={"https://www.1leash.co/shop/" + pageContext.product.slug.current}
@@ -27,10 +28,10 @@ export default function ProductPage({ pageContext }) {
             Add to Cart
           </button>
           <p>{descriptionArray(pageContext)}</p>
+          <div className="vidPlayer">
+            <VideoPlayer url='https://youtu.be/L3XhRjOm4lo' />
+          </div>
         </div>
-      </div>
-      <div className="Description">
-
       </div>
     </Layout>
   )
@@ -75,11 +76,11 @@ function mainImage(edge) {
   return returnString;
 }
 
-function getImageArray(edge){
-  let returnArray =[];
+function getImageArray(edge) {
+  let returnArray = [];
   edge.product.defaultProductVariant.images.map(image => {
     let imgSrc = image.asset.url;
-    returnArray.push(  {
+    returnArray.push({
       original: imgSrc,
       thumbnail: imgSrc,
     })

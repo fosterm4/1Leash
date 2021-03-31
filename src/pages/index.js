@@ -5,7 +5,6 @@ import '../components/css/index.css'
 import BackgroundImage from "gatsby-background-image"
 import MediaQuery from 'react-responsive'
 import SEO from "../components/seo"
-import swivel from "../images/swivel.jpg"
 import sponsors from "../images/sponsors.jpg"
 import VideoPlayer from '../components/videoPlayer'
 import "react-multi-carousel/lib/styles.css";

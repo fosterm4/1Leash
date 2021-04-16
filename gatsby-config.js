@@ -19,7 +19,7 @@ module.exports = {
       resolve: `gatsby-plugin-snipcart-advanced`,
       options: {
         version: '3.0.15',
-        publicApiKey: 'ODQyN2U3OGEtYmE4ZS00NGE3LWIwZWUtODA0MGMwMzkxZDllNjM3NDg4NTQ0OTExOTYzNTk3', // use public api key here or in environment variable
+        publicApiKey: 'S_ZjZlZGU2MjctZWM0YS00ZjIxLWFiNGQtNDM4ZjRmODg5MGRlNjM3NTQxODM4ODg3NTU1MTEx', // use public api key here or in environment variable
         openCartOnAdd: true,
         locales: {
           en: {

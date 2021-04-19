@@ -14,32 +14,17 @@ const IndexPage = (props) => (
   <Layout>
     <SEO title="Home" />
     <div className="indexBackground">
-      <MediaQuery query="(min-device-width: 1440px)">
-        <div className="webBackground">
-          <BackgroundImage
-            className="background"
-            fluid={props.data.backgroundImage1.childImageSharp.fluid}
-            backgroundColor={`#040e18`}
-            style={{
-              height: "450px"
-            }}
-          >
-          </BackgroundImage>
-        </div>
-      </MediaQuery>
-      <MediaQuery query="(max-device-width: 1439px)">
-        <div className="mobileBackground">
-          <BackgroundImage
-            className="background"
-            fluid={props.data.backgroundImage1.childImageSharp.fluid}
-            backgroundColor={`#040e18`}
-            style={{
-              height: "300px"
-            }}
-          >
-          </BackgroundImage>
-        </div>
-      </MediaQuery>
+      <div className="webBackground">
+        <BackgroundImage
+          className="background"
+          fluid={props.data.backgroundImage1.childImageSharp.fluid}
+          backgroundColor={`#040e18`}
+          style={{
+            height: "450px"
+          }}
+        >
+        </BackgroundImage>
+      </div>
     </div>
     <div className="indexTitle">
       <h2>1Leash</h2>
@@ -58,7 +43,7 @@ const IndexPage = (props) => (
       </div>
       <img src={sponsors} alt="sponsors" />
       <h2>View our products below...</h2>
-      <StoreFront data={props.data.allSanityProduct}/>
+      <StoreFront data={props.data.allSanityProduct} />
     </div>
   </Layout>
 )
@@ -81,7 +66,7 @@ function GalleryArray(props) {
 
 export const pageQuery = graphql`
   query {
-    backgroundImage1: file(relativePath: { eq: "shop.jpeg" }) {
+    backgroundImage1: file(relativePath: { eq: "pups.jpeg" }) {
       childImageSharp {
         fluid(maxWidth: 1800){
           ...GatsbyImageSharpFluid

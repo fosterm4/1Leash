@@ -36,7 +36,7 @@ export default Shop;
 
 export const pageQuery = graphql`
   query {
-    backgroundImage: file(relativePath: { eq: "pups.jpeg" }) {
+    backgroundImage: file(relativePath: { eq: "pups2.jpeg" }) {
       childImageSharp {
         fluid(maxWidth: 1800){
           ...GatsbyImageSharpFluid

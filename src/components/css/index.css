@@ -47,6 +47,14 @@ ol{
 
 .AboutUs{
   text-align: center;
+  align-content: center;
+}
+
+.gatsby-image-wrapper{
+  align-content: center;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .AboutUs p{

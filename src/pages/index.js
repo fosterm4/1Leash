@@ -10,16 +10,17 @@ import VideoPlayer from '../components/videoPlayer'
 import "react-multi-carousel/lib/styles.css";
 import StoreFront from "../components/store-front"
 import hp2 from "../images/hp2.jpg"
+import Img from "gatsby-image"
 
 const IndexPage = (props) => (
   <Layout>
     <SEO title="Home" />
     <div className="AboutUs">
-      <img src={hp1} alt="sponsors" />
+      <Img fluid={props.data.backgroundImage1.childImageSharp.fluid}/>
       <div className="swivelPic">
         <VideoPlayer url='https://youtu.be/CS1-5boAqLI' />
       </div>
-      <img src={hp2} alt="sponsors" />
+      <Img fluid={props.data.backgroundImage2.childImageSharp.fluid}/>
       <StoreFront data={props.data.allSanityProduct} />
     </div>
   </Layout>
@@ -45,8 +46,17 @@ export const pageQuery = graphql`
   query {
     backgroundImage1: file(relativePath: { eq: "tophp.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 1800){
-          ...GatsbyImageSharpFluid
+        fluid(maxWidth: 1400) {
+          ...GatsbyImageSharpFluid_noBase64
+          ...GatsbyImageSharpFluidLimitPresentationSize
+        }
+      }
+    }
+    backgroundImage2: file(relativePath: { eq: "hp2.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1400) {
+          ...GatsbyImageSharpFluid_noBase64
+          ...GatsbyImageSharpFluidLimitPresentationSize
         }
       }
     }

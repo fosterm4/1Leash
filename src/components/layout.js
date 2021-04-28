@@ -17,7 +17,12 @@ const Layout = ({ children }) => {
   return (
     <>
       <div>
+        <MediaQuery query="(max-device-width: 748px)">
           <MobileHeader />
+        </MediaQuery>
+        <MediaQuery query="(min-device-width: 749px)">
+          <WebHeader />
+        </MediaQuery>
       </div>
       <main>{children}</main>
       <div id="footer">

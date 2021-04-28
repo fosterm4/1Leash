@@ -5,44 +5,21 @@ import '../components/css/index.css'
 import BackgroundImage from "gatsby-background-image"
 import MediaQuery from 'react-responsive'
 import SEO from "../components/seo"
-import sponsors from "../images/sponsors.jpg"
+import hp1 from "../images/tophp.jpg"
 import VideoPlayer from '../components/videoPlayer'
 import "react-multi-carousel/lib/styles.css";
 import StoreFront from "../components/store-front"
+import hp2 from "../images/hp2.jpg"
 
 const IndexPage = (props) => (
   <Layout>
     <SEO title="Home" />
-    <div className="indexBackground">
-      <div className="webBackground">
-        <BackgroundImage
-          className="background"
-          fluid={props.data.backgroundImage1.childImageSharp.fluid}
-          backgroundColor={`#040e18`}
-          style={{
-            height: "450px"
-          }}
-        >
-        </BackgroundImage>
-      </div>
-    </div>
-    <div className="indexTitle">
-      <h2>1Leash</h2>
-    </div>
     <div className="AboutUs">
-      <h1>More dogs. One leash. Better walks.</h1>
+      <img src={hp1} alt="sponsors" />
       <div className="swivelPic">
-        <div id="swivelText">
-          <h3>The secret is in the swivel...</h3>
-          <p>This unique swivel feature allows for both dogs to walk or run completely tangle free.</p>
-        </div>
         <VideoPlayer url='https://youtu.be/CS1-5boAqLI' />
       </div>
-      <div id="seenIn">
-        <h2>As seen and featured in the following places...</h2>
-      </div>
-      <img src={sponsors} alt="sponsors" />
-      <h2>View our products below...</h2>
+      <img src={hp2} alt="sponsors" />
       <StoreFront data={props.data.allSanityProduct} />
     </div>
   </Layout>
@@ -66,7 +43,7 @@ function GalleryArray(props) {
 
 export const pageQuery = graphql`
   query {
-    backgroundImage1: file(relativePath: { eq: "pups.jpeg" }) {
+    backgroundImage1: file(relativePath: { eq: "tophp.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1800){
           ...GatsbyImageSharpFluid

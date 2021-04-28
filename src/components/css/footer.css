@@ -5,6 +5,7 @@
 
 .mainFooter p{
   color: white;
+  font-size: 24px;
 }
 .mainFooter{
   padding-top: 5px;
@@ -42,4 +43,15 @@
 
 .mainFooter a{
   font-size: 20px;
+}
+button{
+  padding: 5px 12px;
+  font-size: 24px;
+  background:#ED1747;
+  border: none;
+  font-weight: 700;
+  border-radius: 10px;
+  color: white;
+  outline: none;
+  cursor:pointer;
 }
